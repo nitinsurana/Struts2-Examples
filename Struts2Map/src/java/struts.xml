@@ -1,0 +1,16 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default" namespace="/">
+        <action name="naction" class="MyAction" method="startIt">
+            <result name="success">nn.jsp</result>
+        </action>
+
+        <action name="saveaction" class="MyAction" method="save">
+            <result name="success">success.jsp</result>
+        </action>
+    </package>
+</struts>

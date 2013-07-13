@@ -1,0 +1,26 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="false" />
+    <constant name="struts.ognl.allowStaticMethodAccess" value="true"/>
+    <constant name="struts.custom.i18n.resources" value="struts"/>
+
+    <package name="default" extends="struts-default">
+        <action name="gotostart" class="actions.IndexAction">
+            <result name="success">/home.jsp</result>
+            <result name="input">/login.jsp</result>
+        </action>
+        <action name="loginaction" class="actions.IndexAction" method="login">
+            <result name="success">/home.jsp</result>
+            <result name="input">/login.jsp</result>
+        </action>
+        <action name="logoutaction" class="actions.IndexAction" method="logout">
+            <result>/login.jsp</result>
+        </action>
+        <action name="gotoauth">
+            <result>/auth.jsp</result>
+        </action>
+    </package>
+</struts>

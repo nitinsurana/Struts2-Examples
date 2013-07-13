@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true" />
+
+<!--  Below properties/constants required for wildcard Mapping -->
+    <constant name="struts.enable.SlashesInActionNames" value="true"/>
+    <constant name="struts.mapper.alwaysSelectFullNamespace" value="false"/>
+    <constant name="struts.patternMatcher" value="regex" />
+
+    <package name="default" extends="struts-default">
+
+        <action name="orders" class="actions.OrderAction">
+            <interceptor-ref name="store">
+                <param name="operationMode">AUTOMATIC</param>
+            </interceptor-ref>
+            <interceptor-ref name="defaultStack" />
+
+            <result name="success">/orders.jsp</result>
+            <result name="input">/x.jsp</result>
+        </action>
+
+<!-- NOTE - Action name DOESN'T begin with a slash -->
+        <action name="order/new">
+            <result>/orderForm.jsp</result>
+        </action>
+
+<!-- NOTE - Action name DOES begin with a slash -->
+        <action name="/order/{idorder}/edit" class="actions.OrderAction" method="edit">
+            <interceptor-ref name="store">
+                <param name="operationMode">AUTOMATIC</param>
+            </interceptor-ref>
+            <interceptor-ref name="defaultStack" />
+
+            <result name="success">/orderForm.jsp</result>
+            <result name="input" type="redirect">orders</result>
+        </action>
+
+        <action name="/order/{idorder:[0-9]+}/del" class="actions.OrderAction" method="del">
+            <interceptor-ref name="store">
+                <param name="operationMode">AUTOMATIC</param>
+            </interceptor-ref>
+            <interceptor-ref name="defaultStack" />
+
+            <result name="success" type="redirect">orders</result>
+            <result name="input" type="redirect">orders</result>
+        </action>
+
+        <action name="order/save" class="actions.OrderAction" method="save">
+            <interceptor-ref name="store">
+                <param name="operationMode">AUTOMATIC</param>
+            </interceptor-ref>
+            <interceptor-ref name="defaultStack" />
+
+            <result name="success" type="redirectAction">orders</result>
+            <result name="input">/orderForm.jsp</result>
+        </action>
+    </package>
+
+</struts>

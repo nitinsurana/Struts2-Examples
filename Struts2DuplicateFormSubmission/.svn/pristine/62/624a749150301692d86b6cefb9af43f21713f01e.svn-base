@@ -1,0 +1,21 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <interceptors>
+            <interceptor-stack name="tokenstack">
+                <interceptor-ref name="token"/>
+                <interceptor-ref name="basicStack"/>
+            </interceptor-stack>
+        </interceptors>
+        <default-interceptor-ref name="tokenstack"/>
+
+        <action name="saveform" class="MyAction">
+            <result name="success">success.jsp</result>
+            <result name="invalid.token">token.jsp</result>
+        </action>
+    </package>
+</struts>

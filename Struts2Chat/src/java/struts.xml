@@ -1,0 +1,31 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <action name="sendmessageword" class="MyAction" method="executeWord">
+            <result name="success">word.jsp</result>
+        </action>
+        <action name="sendmessageexcel" class="MyAction" method="executeExcel">
+            <result name="success">excel.jsp</result>
+        </action>
+        <action name="sendmessagepowerpoint" class="MyAction" method="executePowerpoint">
+            <result name="success">powerpoint.jsp</result>
+        </action>
+
+        <action name="saveuser" class="MyAction" method="saveUser">
+            <result name="success">home.jsp</result>
+        </action>
+
+
+        <action name="updatepic" class="MyAction">
+            <result name="success">pic.jsp</result>
+        </action>
+<!--
+        <action name="secondaction" class="MyAction" method="secondAction">
+            <result name="success">nn.jsp</result>
+        </action>-->
+    </package>
+</struts>

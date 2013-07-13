@@ -1,0 +1,10 @@
+deploy.ant.properties.file=C:\\Users\\XCoder\\.netbeans\\6.9\\tomcat60.properties
+file.reference.struts2-convention-plugin-2.1.8.jar=C:\\Users\\Nitin\\Desktop\\latest\\Struts2\\struts2-convention-plugin-2.1.8.jar
+file.reference.struts2-jquery-grid-plugin-2.5.0.jar=C:\\Users\\Nitin\\Desktop\\latest\\Struts2\\struts2-jquery-grid-plugin-2.5.0.jar
+file.reference.struts2-jquery-plugin-2.5.0.jar=C:\\Users\\Nitin\\Desktop\\latest\\Struts2\\struts2-jquery-plugin-2.5.0.jar
+file.reference.struts2-json-plugin-2.1.8.jar=C:\\Users\\Nitin\\Desktop\\latest\\Struts2\\struts2-json-plugin-2.1.8.jar
+j2ee.server.home=C:\\Program Files\\Apache Software Foundation\\Apache Tomcat 6.0.26
+j2ee.server.instance=tomcat60:home=C:\\Program Files\\Apache Software Foundation\\Apache Tomcat 6.0.26:base=apache-tomcat-6.0.26_base
+javac.debug=true
+javadoc.preview=true
+user.properties.file=C:\\Users\\XCoder\\.netbeans\\6.9\\build.properties
