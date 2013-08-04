@@ -1,0 +1,17 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default,json-default">
+        <action name="gridaction" class="actions.NAction">
+            <result name="success" type="json"/>
+        </action>
+
+        <action name="editaction" class="actions.NAction" method="edit">
+            <result name="success" type="json"/>
+        </action>
+    </package>
+</struts>
+

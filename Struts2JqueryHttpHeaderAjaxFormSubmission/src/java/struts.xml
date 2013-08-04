@@ -1,0 +1,41 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <action name="ajaxformsubmit" class="actions.AjaxAction">
+            <result name="success" type="httpheader">
+                <param name="status">200</param>
+            </result>
+            <result name="error" type="httpheader">
+                <param name="error">504</param>
+                <param name="errorMessage">This is an error message</param>
+            </result>
+        </action>
+        <action name="getajaxformaction" class="actions.AjaxAction" method="getAjaxForm">
+            <result name="success">form.jsp</result>
+        </action>
+
+
+        
+        <action name="expertajaxformsubmit" class="actions.AjaxAction" method="submitExpertForm">
+<!--            <result name="success" type="httpheader">
+                <param name="status">204</param>
+                <param name="headers.param">name</param>
+                <param name="headers.message">dsafdsf</param>
+            </result>-->
+            <result name="success">nn.jsp</result>
+
+            <result name="error" type="httpheader">
+                <param name="error">504</param>
+                <param name="errorMessage">This is an error message</param>
+            </result>
+        </action>
+        <action name="getexpertajaxformaction" class="actions.AjaxAction" method="getAjaxForm">
+            <result name="success">expertform.jsp</result>
+        </action>
+
+    </package>
+</struts>

@@ -1,0 +1,24 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default,json-default">
+        <action name="lstcountryaction" class="actions.FillListsAction" method="genLstCountry">
+            <result name="success" type="json"/>
+        </action>
+        <action name="lststateaction" class="actions.FillListsAction" method="genLstState">
+            <result name="success" type="json"/>
+        </action>
+        <action name="lstcityaction" class="actions.FillListsAction" method="genLstCity">
+            <result name="success" type="json"/>
+        </action>
+
+
+        <action name="savemainform" class="actions.SaveAction">
+            <result name="success">/index.jsp</result>
+        </action>
+
+    </package>
+</struts>

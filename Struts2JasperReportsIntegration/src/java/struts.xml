@@ -1,0 +1,17 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <package name="default" extends="jasperreports-default,struts-default">
+        <action name="myJasperTest" class="action.JasperAction">
+            <result name="success" type="jasper">
+                <param name="location">/jasper/contacts.jasper</param>
+                <param name="dataSource">beanCollection</param>
+                <param name="format">PDF</param>
+            </result>
+            <result name="error" type="jasper">/Error.jsp</result>
+        </action>
+    </package>
+</struts>
