@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+  		"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+
+<validators>
+    <field name="user.age">
+        <field-validator type="int">
+            <message>If entered should be an int</message>
+        </field-validator>
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Required</message>
+        </field-validator>
+    </field>
+    <!--    <field name="account.login">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Required</message>
+        </field-validator>
+    </field>
+    <field name="account.investorpass">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Required</message>
+        </field-validator>
+    </field>-->
+</validators>

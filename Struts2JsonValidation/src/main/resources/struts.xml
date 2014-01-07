@@ -1,0 +1,34 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.ognl.allowStaticMethodAccess" value="true"/>
+    
+    <constant name="struts.enable.SlashesInActionNames" value="true"/>
+    <constant name="struts.mapper.alwaysSelectFullNamespace" value="false"/>
+    <constant name="struts.patternMatcher" value="regex" />
+
+    <package name="default" extends="json-default">
+        <interceptors>
+            <interceptor name="myjson" class="interceptors.MyJsonInterceptor"/>
+        </interceptors>
+        
+        <action name="post-json" class="actions.MyAction">
+            <interceptor-ref name="jsonValidationWorkflowStack">
+            </interceptor-ref>
+            <interceptor-ref name="myjson">
+                <param name="enableSMD">true</param>
+            </interceptor-ref>
+            <interceptor-ref name="defaultStack"/>
+<!--            <interceptor-ref name="json">
+                <param name="enableSMD">true</param>
+            </interceptor-ref>-->
+            
+            <result name="*" type="json">
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+    </package>
+</struts>
