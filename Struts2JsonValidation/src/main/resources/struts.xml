@@ -16,12 +16,12 @@
         </interceptors>
         
         <action name="post-json" class="actions.MyAction">
-            <interceptor-ref name="jsonValidationWorkflowStack">
-            </interceptor-ref>
+<!--            <interceptor-ref name="jsonValidationWorkflowStack">
+            </interceptor-ref>-->
+            <interceptor-ref name="defaultStack"/>
             <interceptor-ref name="myjson">
                 <param name="enableSMD">true</param>
             </interceptor-ref>
-            <interceptor-ref name="defaultStack"/>
 <!--            <interceptor-ref name="json">
                 <param name="enableSMD">true</param>
             </interceptor-ref>-->
