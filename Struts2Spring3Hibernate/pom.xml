@@ -10,7 +10,7 @@
     <url>http://maven.apache.org</url>
     <properties>
         <spring.version>3.2.0.RELEASE</spring.version>
-        <struts.version>2.3.8</struts.version>
+        <struts.version>2.5.26</struts.version>
         <hibernate.version>3.6.0.Final</hibernate.version>
         <netbeans.hint.deploy.server>Tomcat60</netbeans.hint.deploy.server>
     </properties>
