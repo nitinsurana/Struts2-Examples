@@ -11,7 +11,7 @@
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
-        <struts.version>2.3.12</struts.version>
+        <struts.version>2.5.26</struts.version>
         <hibernate.version>3.6.10.Final</hibernate.version>
         <struts.jquery.version>3.5.1</struts.jquery.version>
         <netbeans.compile.on.save>all</netbeans.compile.on.save>
