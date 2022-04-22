@@ -56,6 +56,6 @@
     </build>
     <properties>
         <netbeans.hint.deploy.server>Tomcat60</netbeans.hint.deploy.server>
-        <struts.version>2.3.12</struts.version>
+        <struts.version>2.5.30</struts.version>
     </properties>
 </project>
